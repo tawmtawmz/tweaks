@@ -1,0 +1,12 @@
+# Enable extended entity drop tables.
+drops_enabled: true
+drops: []
+
+# Enable single-player sleep.
+single_sleep_enabled: true
+
+# Enable setting spawn at bed during the day.
+set_spawn_enabled: true
+
+# Enable Endermites to burrow into Chorus Flowers to spawn Shulkers.
+endermite_evolve_enabled: true

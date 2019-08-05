@@ -1,0 +1,8 @@
+name: tawmtawmz-tweaks
+version: alpha
+api-version: 1.14
+main: com.tawmtawmz.tweaks.main
+commands:
+  tt:
+    description: tawmtawmz tweaks
+    usage: '/tt'
