@@ -84,11 +84,16 @@ public class listener implements Listener {
                 player.setBedSpawnLocation(block.getLocation());
                 player.sendMessage("Spawn point set.");
             }
+        }
+        if (util.getPlugin().getConfig().getBoolean(constants.KEY_SLEEP)) {
             if (result.equals(PlayerBedEnterEvent.BedEnterResult.OK)) {
                 Bukkit.broadcastMessage(String.format("%s is sleeping.", player.getDisplayName()));
                 Bukkit.getScheduler().scheduleSyncDelayedTask(util.getPlugin(), new Runnable() {
                     public void run() {
                         player.getWorld().setTime(0);
+                        if (player.getWorld().isThundering()) {
+                            player.getWorld().setStorm(false);
+                        }
                     }
                 }, constants.PLAYER_SLEEP_TIME);
             }
