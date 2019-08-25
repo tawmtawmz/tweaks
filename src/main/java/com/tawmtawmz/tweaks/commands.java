@@ -35,6 +35,8 @@ public class commands implements CommandExecutor {
                     util.getPlugin().getConfig().set(key, value);
                     util.getPlugin().saveConfig();
                 }
+
+                sender.sendMessage(String.format("%s is now set to %s", key, value));
             }
             else if (_subcommand.equals(constants.SUBCOMMAND_ADD)) {
                 String type = args[2];
